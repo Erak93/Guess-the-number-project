@@ -44,5 +44,5 @@ while game_is_over==False:
     if difficulty_level==0:
         print(f"You run out of attempts. You lost. The number was {random_number}")
         game_is_over=True
-    elif difficulty_level!=0 and game_is_over==False:
+    elif difficulty_level!=0 and game_is_over==False and guess!=random_number:
         print(f'You have {difficulty_level} attempts remaining')
