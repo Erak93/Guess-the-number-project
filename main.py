@@ -31,7 +31,7 @@ while game_is_over==False:
     guess=int(input("Guess a number between 1 and 100:\n"))
     
     if guess<random_number:
-        print("Your guess is too low")
+        print(f"Your guess is too low.")
     elif guess>random_number:
         print("Your guess is too high")
     elif guess==random_number:
@@ -40,6 +40,9 @@ while game_is_over==False:
     
     difficulty_level-=1
 
+
     if difficulty_level==0:
         print(f"You run out of attempts. You lost. The number was {random_number}")
         game_is_over=True
+    elif difficulty_level!=0 and game_is_over==False:
+        print(f'You have {difficulty_level} attempts remaining')
